@@ -9,7 +9,9 @@ var decoders = {
 }
 
 function from(source, encoding) {
-  if(Array.isArray(source)) {
+  if (source instanceof Uint8Array) {
+    return source;
+  } else if (Array.isArray(source) || source instanceof ArrayBuffer) {
     return new Uint8Array(source)
   }
 
