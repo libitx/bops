@@ -15,7 +15,7 @@ use `bops` in place of `Buffer` or `Uint8Array` to make your binary JS code fast
 ```javascript
 var binary = require('bops')
 
-binary.readUInt8(new Buffer(10), 0) // === 10
+binary.readUInt8(Buffer.from([10]), 0) // === 10
 
 ```
 
